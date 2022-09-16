@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GO 简单制作验证码案例</title>
+</head>
+<body>
+
+
+<form action="/captcha/verify" method="post">
+    User:<input type="text"><br/>
+    Pwd:<input type="password"><br/>
+    Captcha:<input type="text" name="code">
+
+    <img src="/verifyCode" onclick="this.src='/verifyCode?v=' + math.random()">
+
+    <input type="submit">
+</form>
+
+</body>
+</html>
